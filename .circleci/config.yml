@@ -246,6 +246,7 @@
               #cd frontend
               export BACKEND_IP=$(cat ~/hosts.txt | grep -v "all" )
               export API_URL="http://${BACKEND_IP}:3030"
+              echo API_URL="http://${BACKEND_IP}:3030" >> frontend/.env
               echo $API_URL > ~/.url
               echo $API_URL 
         - run:
